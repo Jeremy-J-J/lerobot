@@ -6,9 +6,9 @@ set -euo pipefail
 # Press Right Arrow when the grasp/place succeeds to end and save the episode.
 # Press Esc or Ctrl+C to stop manually.
 #
-# Rerun can freeze when it receives 640x480 images and scalar streams at high FPS
-# while LeRobot is also recording/encoding a dataset. These settings reduce the
-# flush overhead and keep the live viewer responsive.
+# Rerun can freeze when it receives 640x480 images and scalar streams at high FPS.
+# These settings reduce flush overhead while keeping image features available for
+# the policy and dataset metadata.
 export RERUN_FLUSH_NUM_BYTES="${RERUN_FLUSH_NUM_BYTES:-1048576}"
 export LEROBOT_RERUN_MEMORY_LIMIT="${LEROBOT_RERUN_MEMORY_LIMIT:-25%}"
 
@@ -25,6 +25,5 @@ lerobot-record \
     --dataset.num_episodes=1 \
     --dataset.episode_time_s=600 \
     --dataset.reset_time_s=0 \
-    --dataset.video=false \
     --dataset.single_task="Grab the yellow toy duck and place it on the box" \
     --policy.path=/workspace/models/lerobot_model/train_v1/300000/last/pretrained_model
