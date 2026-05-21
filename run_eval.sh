@@ -8,4 +8,4 @@ lerobot-record \
     --display_data=false \
     --dataset.repo_id=seeed/eval_test1 \
     --dataset.single_task="Grab the yellow toy duck and place it on the box" \
-    --policy.path=/workspace/models/lerobot_model/train_v1/200000
+    --policy.path=/workspace/models/lerobot_model/train_v1/200000/pretrained_model
