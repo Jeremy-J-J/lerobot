@@ -17,4 +17,4 @@ lerobot-record \
     --dataset.episode_time_s=600 \
     --dataset.reset_time_s=0 \
     --dataset.single_task="Grab the yellow toy duck and place it on the box" \
-    --policy.path=/workspace/models/lerobot_model/train_v1/120000/pretrained_model
+    --policy.path=/workspace/models/lerobot_model/train_v1/300000/last/pretrained_model
