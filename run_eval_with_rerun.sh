@@ -17,7 +17,7 @@ rm -rf ~/.cache/huggingface/lerobot/seeed/eval_test1
 lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyUSB0 \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 10, fourcc: "MJPG"}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 25, fourcc: "MJPG"}}" \
     --robot.id=my_awesome_follower_arm \
     --display_data=true \
     --dataset.repo_id=seeed/eval_test1 \
